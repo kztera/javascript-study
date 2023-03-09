@@ -249,7 +249,7 @@ console.log(typeof b); // number
 console.log(typeof c); // object
 ```
 
-<img src="assets/typeof-null.jpg" display="inline-block" align="right" width="450px">
+<img src="assets/typeof-null.jpg" display="inline-block" align="right" width="430px">
 
 Therefore, JavaScript's dynamic typing is good and bad at the same time. It's good because you don't have to indicate the variable's type. It's bad because you can never be sure about the variable's type. 
 
