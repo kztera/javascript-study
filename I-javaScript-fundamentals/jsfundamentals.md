@@ -17,6 +17,7 @@
     - [3.2.7. Null and Undefined](#327-null-and-undefined)
     - [3.2.8. Object](#328-object)
       - [3.2.8.1 Array](#3281-array)
+  - [3.3. Statically typed vs. dynamically typed](#33-statically-typed-vs-dynamically-typed)
 - [4. Operators and Equality](#4-operators-and-equality)
 - [5. Logic and Control Flow](#5-logic-and-control-flow)
 - [6. Functions](#6-functions)
@@ -302,7 +303,7 @@ var result2 = a + c; // 123Hello World!
 
 var result3 = a / c; // NaN
 
-console.log(typepf result3); // number
+console.log(typeof result3); // number
 ```
 
 ##### 3.2.6.1. NaN
@@ -342,12 +343,6 @@ var person = {
 You can access the properties of an object using dot notation. It is also possible to access the properties of an object using square brackets. However, you should use square brackets when the property name contains special characters or when the property name is stored in a variable. For example:
 
 ```javascript
-var person = {
-  name: "John",
-  age: 30,
-  city: "New York"
-};
-
 console.log(person.name); // John
 
 person.name = "Jane";
@@ -383,6 +378,25 @@ console.log(fruits[1]); // Banana
 console.log(fruits[2]); // Orange
 ```
 
+### 3.3. Statically typed vs. dynamically typed
+
+Statically typed languages are those in which the type of a variable is known at compile time. In contrast, dynamically typed languages are those in which the type of a variable is known at run time.
+
+Simply, C++, C or Java is a statically typed language, while JavaScript is a dynamically typed language. To declare a variable in C++, you need to specify the data type of the variable. For example:
+
+```c++
+int a = 1; // c++
+```
+
+In JavaScript, you don't need to specify the data type of a variable when you declare it. Instead, the data type is determined automatically when the value is assigned to the variable. For example:
+
+```javascript
+var a = 1;
+console.log(typeof a); // number
+
+a = "Hello World!";
+console.log(typeof a); // string
+```
 
 ## 4. Operators and Equality
 
