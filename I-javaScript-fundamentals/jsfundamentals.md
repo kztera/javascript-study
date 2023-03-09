@@ -3,22 +3,26 @@
 <h2> Table of Contents </h2>
 
 - [1. What is Javascript?](#1-what-is-javascript)
-        - [\*Source: Stack Overflow Developer Survey 2020](#source-stack-overflow-developer-survey-2020)
 - [2. Hello World!](#2-hello-world)
 - [3. Data Types and Variables](#3-data-types-and-variables)
-  - [3.1 Data Types](#31-data-types)
-  - [3.2 Variables](#32-variables)
+  - [3.1. Data Types](#31-data-types)
+  - [3.2. Variables](#32-variables)
     - [3.2.1. Variable Scope](#321-variable-scope)
     - [3.2.2. Difference between `" "` and `' '`?](#322-difference-between---and--)
     - [3.2.3. Inserting Variables into Strings](#323-inserting-variables-into-strings)
     - [3.2.4. typeof Operator](#324-typeof-operator)
+    - [3.2.5. Type Conversion](#325-type-conversion)
+    - [3.2.6. Number](#326-number)
+      - [3.2.6.1. NaN](#3261-nan)
+    - [3.2.7. Null and Undefined](#327-null-and-undefined)
+    - [3.2.8. Object](#328-object)
+      - [3.2.8.1 Array](#3281-array)
 - [4. Operators and Equality](#4-operators-and-equality)
 - [5. Logic and Control Flow](#5-logic-and-control-flow)
 - [6. Functions](#6-functions)
 
 ## 1. What is Javascript?
 <img src="assets/popular-lang.webp" display="inline-block" align="right" width=400px>
-
 
 JavaScript is a programming language that's used to create interactive websites and web applications. It runs on your web browser and allows developers to make web pages that can respond to user actions. It's a versatile language that can be used for many different things, like creating mobile apps or controlling hardware devices. Think of it as a tool that web developers use to make websites more interactive and interesting for users. 
 
@@ -73,7 +77,7 @@ This is also a comment
 
 ## 3. Data Types and Variables
 
-### 3.1 Data Types
+### 3.1. Data Types
 
 In JavaScript, there are 7 data types:
 
@@ -83,7 +87,7 @@ In JavaScript, there are 7 data types:
 
 Among them, **Object** is the most important one and forms the building blocks for modern JavaScript. 
 
-### 3.2 Variables
+### 3.2. Variables
 
 To declare a variable, you can use `var`, `let` or `const`. For example:
 
@@ -115,7 +119,7 @@ c = 2; // TypeError: Assignment to constant variable.
 
 <img src="assets/variable.webp" display="inline-block" align="right" width=250px> 
 
-As you can see, `var` and `let` can be declared multiple times, but `const` can only be declared once.
+As you can see, `var` can be re-declared and updated. `let` can be updated but not re-declared. `const` can neither be updated nor re-declared.
 
 Let check some rules for naming variables:
 1. Should be unique
@@ -142,6 +146,61 @@ test();
 console.log(a); // 1
 console.log(b); // ReferenceError: b is not defined
 ```
+
+Let compare the difference between `var` and `let`:
+
+|var|let|
+|:---:|:---:|
+|Function scoped|Block scoped|
+|Can be re-declared|Cannot be re-declared|
+|Hoisting occurs|Hoisting does not occur|
+
+- **Scope**: Redeclaring a variable with `var` in a different scope or block changes the value of the outer variable too. But redeclaring a variable with `let` in a different scope or block treats that variable as a different variable. And the value of a variable outside does not change. For example:
+
+```javascript
+vr a = 5;
+console.log(a); // 5
+{
+   var a = 10;
+   console.log(a); // 10
+}
+console.log(a); // 10
+
+let b = 5;
+console.log(b); // 5
+{
+   let b = 10;
+   console.log(b); // 10
+}
+console.log(b); // 5
+```
+
+In a loop, `var` will re-declare the variable for each iteration. But `let` will not. For example:
+
+```javascript
+var i = 1;
+for (var i = 0; i < 5; i++) {
+    console.log(i); // 0 1 2 3 4
+}
+console.log(i); // 5
+
+let j = 1;
+for (let j = 0; j < 5; j++) {
+    console.log(j); // 0 1 2 3 4
+}
+console.log(j); // 1
+```
+
+- **Hoisting**: Hoisting is JavaScript's default behavior of moving all declarations to the top of the current scope (to the top of the current script or the current function). The variables declared with `var` are hoisted to the top of the scope of the program but the keyword `let` does not allow hoisting. For example:
+
+```javascript
+console.log(a); // undefined (not an error)
+var a = 1;
+
+console.log(b); // ReferenceError: b is not defined
+let b = 1;
+```
+
 
 #### 3.2.2. Difference between `" "` and `' '`?
 
@@ -190,7 +249,7 @@ console.log(typeof b); // number
 console.log(typeof c); // object
 ```
 
-<img src="assets/typeof-null.jpg" display="inline-block" align="right" width="550px">
+<img src="assets/typeof-null.jpg" display="inline-block" align="right" width="450px">
 
 Therefore, JavaScript's dynamic typing is good and bad at the same time. It's good because you don't have to indicate the variable's type. It's bad because you can never be sure about the variable's type. 
 
@@ -201,6 +260,129 @@ When JavaScript was first created, its data types were defined using a set of ta
 To work around this issue, the creators of JavaScript decided to use the type code for an object to represent null instead. As a result, the typeof null expression returns 'object'.
 
 However, it's worth noting that null is not actually an object in JavaScript. It is a primitive value that represents the intentional absence of any object value. While this historical accident may be confusing, it's not something that is likely to change in the future due to the need to maintain backwards compatibility with existing code.
+
+#### 3.2.5. Type Conversion
+
+Type conversion is the process of converting a value from one data type to another (such as string to number, object to boolean, and so on). JavaScript is a dynamically typed language, which means that you don't have to specify the data type of a variable when you declare it. Instead, the data type is determined automatically when the value is assigned to the variable.
+
+```javascript
+var a = 1; // number
+var b = "Hello World!"; // string
+var c = true; // boolean
+
+a = b; // a is now a string
+c = 3; // c is now a number
+```
+
+However, sometimes you may need to explicitly convert a value from one data type to another if you want javascript understand what you want. For example:
+
+```javascript
+var a = 1;
+var b = "2";
+
+console.log(a + b); // 12
+console.log(a + Number(b)); // 3
+```
+
+In the above example, `a` is a number and `b` is a string. When you use `+` to add them together, JavaScript will convert `b` to a number and then add them together. Therefore, the result is `12` instead of `3`.
+
+To know more about type conversion, you can read [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number) and [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String).
+
+#### 3.2.6. Number
+
+JavaScript has only one type of number. Numbers can be written with or without decimals.
+
+```javascript
+var a = 123;
+var b = 123.456;
+var c = "Hello World!";
+
+var result1 = a + b; // 246.456
+var result2 = a + c; // 123Hello World!
+
+var result3 = a / c; // NaN
+
+console.log(typepf result3); // number
+```
+
+##### 3.2.6.1. NaN
+
+The reason why typeof NaN returns 'number' in JavaScript is because `NaN` is actually a numeric value, albeit a special one.
+
+`NaN` stands for "Not a Number" and is used to represent the result of a mathematical operation that cannot be represented as a valid number. For example, dividing zero by zero, or taking the square root of a negative number, both result in `NaN`.
+
+In JavaScript, `NaN` is considered to be a numeric value because it is represented using the Number data type. Specifically, `NaN` is a special value of the Number type that represents an "invalid number."
+
+Although `NaN` is not a "real" number in the mathematical sense, it is still considered to be a numeric value in JavaScript because it is represented using the Number data type. As a result, typeof `NaN` returns 'number'.
+
+#### 3.2.7. Null and Undefined
+
+In JavaScript, `null` and `undefined` are two different values that represent the absence of a value. However, they are not the same thing. `null` is an assignment value. It can be assigned to a variable as a representation of no value. `undefined` is a property value. It is automatically assigned to variables that have just been declared, or to formal arguments for which there are no actual arguments.
+
+```javascript
+var a; // undefined
+var b = null; // null
+
+console.log(typeof a); // undefined
+console.log(typeof b); // object
+```
+
+#### 3.2.8. Object
+
+An object is a collection of properties, and a property is an association between a name (or key) and a value. A property's value can be a function, in which case the property is known as a method. In addition to objects that are predefined in the browser, you can define your own objects. 
+
+```javascript
+var person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+```
+
+You can access the properties of an object using dot notation. It is also possible to access the properties of an object using square brackets. However, you should use square brackets when the property name contains special characters or when the property name is stored in a variable. For example:
+
+```javascript
+var person = {
+  name: "John",
+  age: 30,
+  city: "New York"
+};
+
+console.log(person.name); // John
+
+person.name = "Jane";
+
+console.log(person["name"]); // Jane
+```
+
+##### 3.2.8.1 Array
+
+An array is a special type of object that stores a collection of values. The values can be of any data type, including strings, numbers, booleans, objects, and even other arrays. 
+
+```javascript
+var fruits = ["Apple", "Banana", "Orange"];
+
+console.log(typeof fruits); // object
+console.log(fruits) 
+/* ["Apple", "Banana", "Orange"]
+   0: "Apple"
+   1: "Banana"
+   2: "Orange"
+   length: 3
+   __proto__: Array(0)
+*/
+```
+
+You can access the elements of an array using square brackets. The index of the first element is 0, and the index of the last element is the length of the array minus 1. For example:
+
+```javascript
+var fruits = ["Apple", "Banana", "Orange"];
+
+console.log(fruits[0]); // Apple
+console.log(fruits[1]); // Banana
+console.log(fruits[2]); // Orange
+```
+
 
 ## 4. Operators and Equality
 
