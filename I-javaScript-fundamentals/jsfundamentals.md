@@ -45,6 +45,10 @@ When you see the output, you have successfully run your first JavaScript code. C
 
 ![console](assets/i2_2.png)
 
+In another way, you can also run the code in VS code by installing the `Code Runner` extension. You can find the extension [here](https://marketplace.visualstudio.com/items?itemName=formulahendry.code-runner). After installing the extension, you can run the code by pressing `Ctrl + Alt + N` on your keyboard. 
+
+And finally, you can also run the code in [repl.it](https://repl.it/) or [jsfiddle](https://jsfiddle.net/) or [codepen](https://codepen.io/) or blah blah xD.
+
 ## 3. Data Types and Variables
 
 ## 4. Operators and Equality
