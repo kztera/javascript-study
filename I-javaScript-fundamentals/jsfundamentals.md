@@ -21,6 +21,30 @@ According to recent polls, JavaScript (JS) is the most popular programming langu
 
 ## 2. Hello World!
 
+Same as other programming languages, we will start with a simple "Hello World!" program. 
+
+```javascript
+console.log("Hello World!");
+```
+
+The `console.log()` function is used to print the output to the console.
+
+But, how do we run this code? Luckily, there are many ways to run JavaScript code. You really don't need IDEs or editors to run JavaScript code. You can run it directly in your browser's console.
+
+First, create a new file `index.html`. Then, add the following code in [here](code/index.html) to the file and save it. Then, open the file in your browser. Right click on the page and select `Inspect` or you can press `F12` on your keyboard. Then, click on the `Console` tab. You will see something like this:
+
+![console](assets/i2_1.png)
+
+Switch to the `Console` tab and type the code above and press `Enter`. You will see the output in the console.
+
+```javascript
+console.log("Hello World!");
+```
+
+When you see the output, you have successfully run your first JavaScript code. Congratulations!
+
+![console](assets/i2_2.png)
+
 ## 3. Data Types and Variables
 
 ## 4. Operators and Equality
