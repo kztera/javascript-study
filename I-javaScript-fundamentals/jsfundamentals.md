@@ -17,14 +17,16 @@
 - [6. Functions](#6-functions)
 
 ## 1. What is Javascript?
+<img src="assets/popular-lang.webp" display="inline-block" align="right" width=400px>
+
 
 JavaScript is a programming language that's used to create interactive websites and web applications. It runs on your web browser and allows developers to make web pages that can respond to user actions. It's a versatile language that can be used for many different things, like creating mobile apps or controlling hardware devices. Think of it as a tool that web developers use to make websites more interactive and interesting for users. 
 
 If you want know more about History of Js, you can read it in [here](https://en.wikipedia.org/wiki/JavaScript)
 
-According to recent polls, JavaScript (JS) is the most popular programming language today, with 65.36% of developers utilizing it.* Has such popularity made you excited to be one of those 64.96% programmers? Let's get started!
+According to recent polls, JavaScript (JS) is the most popular programming language today, with 65.36% of developers utilizing it.* Has such popularity made you excited to be one of those 65.36% programmers? Let's get started!
 
-![popular language](assets/popular-lang.webp)
+<!-- ![popular language](assets/popular-lang.webp) -->
 
 **Source: [Stack Overflow Developer Survey 2022](https://survey.stackoverflow.co/2022/#technology)*
 
@@ -188,7 +190,7 @@ console.log(typeof b); // number
 console.log(typeof c); // object
 ```
 
-<img src="assets/typeof-null.jpg" display="inline-block" align="right" width="450px">
+<img src="assets/typeof-null.jpg" display="inline-block" align="right" width="550px">
 
 Therefore, JavaScript's dynamic typing is good and bad at the same time. It's good because you don't have to indicate the variable's type. It's bad because you can never be sure about the variable's type. 
 
