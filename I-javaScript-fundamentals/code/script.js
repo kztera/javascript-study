@@ -138,3 +138,24 @@ console.log(fruits)
 console.log(fruits[0]); // Apple
 console.log(fruits[1]); // Banana
 console.log(fruits[2]); // Orange
+
+// ### 4.2. Comparison Operators
+
+var a = 1;
+var b = 2;
+
+console.log(a == b); // false
+console.log(a != b); // true
+//
+var a = 1;
+var b = "1";
+
+console.log(a == b); // true
+console.log(a === b); // false
+// ### 4.3. Logical Operators
+var a = 1;
+var b = 2;
+
+console.log(a == 1 && b == 2); // true
+console.log(a == 1 || b == 3); // true
+console.log(!(a == 1)); // false
