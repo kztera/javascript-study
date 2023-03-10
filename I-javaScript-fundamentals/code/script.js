@@ -159,3 +159,73 @@ var b = 2;
 console.log(a == 1 && b == 2); // true
 console.log(a == 1 || b == 3); // true
 console.log(!(a == 1)); // false
+
+// ## 5. Logic and Control Flow
+var age = 19;
+var condition = age >= 18;
+
+if (age >= 18) {
+  /* This block of code will be executed if the condition is true */
+  console.log("You are an adult");
+} else if (13 <= age && age < 18) {
+  /* This block of code will be executed if the condition is false */
+  console.log("You are a teenager");
+} else {
+  /* This block of code will be executed if the condition is false */
+  console.log("You are a child");
+}
+//
+var i = 0;
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+
+//
+
+switch (day) {
+    case 1:
+      console.log("Monday");
+      break;
+    case 2:
+      console.log("Tuesday");
+      break;
+    case 3:
+      console.log("Wednesday");
+      break;
+    case 4:
+      console.log("Thursday");
+      break;
+    case 5:
+      console.log("Friday");
+      break;
+    case 6:
+      console.log("Saturday");
+      break;
+    case 7:
+      console.log("Sunday");
+      break;
+    default:
+      console.log("Invalid day");
+  }
+
+// ## 6. Functions
+
+function sayHello() {
+    console.log("Hello");
+  }
+  
+  sayHello();
+
+//
+var name = "John";
+
+function sayHello(name) {
+    console.log("Hello ${name}");
+}
+
+var sayHello = (name) => {
+    console.log("Hello ${name}"); // Hello John
+  }
+  
+  sayHello("John");

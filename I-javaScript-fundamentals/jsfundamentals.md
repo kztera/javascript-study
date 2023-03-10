@@ -28,6 +28,10 @@
   - [5.3. For statement](#53-for-statement)
   - [5.3. Switch statement: Ternary operator](#53-switch-statement-ternary-operator)
 - [6. Functions](#6-functions)
+  - [6.1. Function declaration](#61-function-declaration)
+  - [6.2. Function call](#62-function-call)
+  - [6.3. Function expression](#63-function-expression)
+  - [6.4. Arrow function](#64-arrow-function)
 
 ## 1. What is Javascript?
 <img src="assets/popular-lang.webp" display="inline-block" align="right" width=400px>
@@ -577,5 +581,137 @@ This is useful when you have many conditions to check, each with different actio
 
 ## 6. Functions
 
+This is the most interesting and important part of JavaScript. A function is a block of code designed to perform a particular task. A JavaScript function is executed when "something" invokes it (calls it). For example:
 
+```javascript
+function sayHello() {
+  console.log("Hello");
+}
+
+sayHello();
+```
+
+We have two terms about function:
+1. Function declaration: that where we define the function
+2. Function call: that where we invoking/executing the function
+
+### 6.1. Function declaration
+Let's review a function declaration word by word:
+
+```javascript
+var name = "John";
+
+function sayHello(name) {
+  console.log("Hello ${name}"); // Hello John
+}
+```
+
+- `function` keyword: that is used to declare a function
+- `sayHello`: that is the name of the function
+- `name`: that is the parameter of the function. Name of the parameter can be anything you want but don't forget change the name in the body of the function too
+- `console.log(f"Hello {name}")`: that is the body of the function
+
+**Rules for naming a function:**
+- The name must contain only letters, digits, or the symbols `$` and `_`.
+- The first character must not be a digit.
+- Reserved words, such as "for", "let", "return", and "class" cannot be used as names. You can find a full list of reserved words [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#reserved_words).
+
+Another example:
+
+```javascript
+
+function sum(a, b) {
+  return a + b;
+}
+
+- `return`: that is used to return a value from a function
+
+```javascript
+var a = 1;
+var b = 2;
+
+var result = sum(a, b); // 3
+```
+
+### 6.2. Function call
+
+To call a function, you need to write the function name followed by parentheses `()`. For example:
+
+```javascript
+sayHello();
+```
+
+### 6.3. Function expression
+
+```javascript
+var sayHello = function(name) {
+  console.log("Hello ${name}"); // Hello John
+}
+
+sayHello("John");
+```
+
+In here, we are setting the value of `sayHello` variable to a function. This is call a function expression. It is very similar to and has almost the same syntax as a function declaration. The main difference between a function expression and a function declaration is the function name, which can be omitted in function expressions to create anonymous functions like above.
+
+### 6.4. Arrow function
+
+```javascript
+var sayHello = (name) => {
+  console.log("Hello ${name}"); // Hello John
+}
+
+sayHello("John");
+```
+
+So, we have three ways to declare a function:
+1. Function declaration
+2. Function expression
+3. Arrow function
+
+You don't need to memorize all of them. Arrow functions are the most modern way to declare a function. For that reason, we're going to explore more about them. There's only one advantage of using a function declaration is that they have the access to `this` keyboard.
+
+Let's try to create a function by three ways:
+
+```javascript
+// Function declaration
+function sum(a, b) {
+  return a + b;
+}
+
+// Function expression
+var sum = function(a, b) {
+  return a + b;
+}
+
+// Arrow function
+var sum = (a, b) => {
+  return a + b;
+}
+```
+
+Every function if it doesn't have a `return` keyword, it will return `undefined`. 
+
+---
+
+So, we have learned about:
+- Variables
+- Data types
+- Operators
+- Conditional statements
+- Loops 
+- Functions
+
+To practice more, you can use all you learned to make a small project. For example, you can make a calculator or a game like Tic Tac Toe or Rock Paper Scissors. Hope you enjoy it and ready to go to the next chapter ^^.
+
+---
+
+( ﾉ ﾟｰﾟ)ﾉ Next Chapter in herer: [II. DOM and Events Fundamentals](https://github.com/kztera/javascript-study/blob/main/ii-DOM-and-events-fundamentals/dom-n-events-fundamentals.md) 
+
+![congrats](assets/congrats.gif)
+
+---
+
+***References:***
+- [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- [JavaScript Crash Course 2021 - Master JavaScript in One Video!](https://www.youtube.com/watch?v=g7T23Xzys-A) by [JavaScript Mastery](https://www.youtube.com/@javascriptmastery)
 
