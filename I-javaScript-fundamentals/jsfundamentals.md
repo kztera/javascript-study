@@ -23,6 +23,10 @@
   - [4.2. Comparison Operators](#42-comparison-operators)
   - [4.3. Logical Operators](#43-logical-operators)
 - [5. Logic and Control Flow](#5-logic-and-control-flow)
+  - [5.1. If statement: Truthy and Falsy values](#51-if-statement-truthy-and-falsy-values)
+  - [5.2. While statement](#52-while-statement)
+  - [5.3. For statement](#53-for-statement)
+  - [5.3. Switch statement: Ternary operator](#53-switch-statement-ternary-operator)
 - [6. Functions](#6-functions)
 
 ## 1. What is Javascript?
@@ -476,6 +480,100 @@ console.log(!(a == 1)); // false
 ```
 
 ## 5. Logic and Control Flow
+
+### 5.1. If statement: Truthy and Falsy values
+
+`If` statement is consisted of a condition has value `true` or `false` and a block of code. The condition is evaluated and if it is `true`, the block of code is executed. For example:
+
+```javascript
+var age = 19;
+var condition = age >= 18;
+
+if (age >= 18) {
+  /* This block of code will be executed if the condition is true */
+  console.log("You are an adult");
+} else if (13 <= age && age < 18) {
+  /* This block of code will be executed if the condition is false */
+  console.log("You are a teenager");
+} else {
+  /* This block of code will be executed if the condition is false */
+  console.log("You are a child");
+}
+```
+
+In JavaScript, there are some values that are considered `false` when evaluated in a boolean context. These values are called falsy values. The following values are falsy:
+
+* `false`
+*  `0`
+*  `""` (empty string)
+*  `null`
+*  `undefined`
+*  `NaN`
+*  `document.all` (in browsers)
+*  `0n` (BigInt)
+
+### 5.2. While statement
+
+`While` statement is consisted of a condition has value `true` or `false` and a block of code. The condition is evaluated and if it is `true`, the block of code is executed. After that, the condition is evaluated again and the process repeats until the condition is `false`. For example:
+
+```javascript
+var i = 0;
+while (i < 10) {
+  console.log(i);
+  i++;
+}
+```
+### 5.3. For statement
+
+`For` statement is consisted of three expressions, enclosed in parentheses and separated by semicolons, followed by a statement (usually a block statement) to be executed in the loop. We have form of `for` statement:
+
+```javascript
+for ([initialExpression]; [conditionExpression]; [incrementExpression]) {
+  doSomething();
+}
+```
+For example:
+```javascript
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+```
+
+### 5.3. Switch statement: Ternary operator
+
+`Switch` statement is used to perform different actions based on different conditions. `Switch` statement is often used together with a `break` or a `default` keyword (or both). For example:
+
+```javascript
+var day = 2;
+
+switch (day) {
+  case 1:
+    console.log("Monday");
+    break;
+  case 2:
+    console.log("Tuesday");
+    break;
+  case 3:
+    console.log("Wednesday");
+    break;
+  case 4:
+    console.log("Thursday");
+    break;
+  case 5:
+    console.log("Friday");
+    break;
+  case 6:
+    console.log("Saturday");
+    break;
+  case 7:
+    console.log("Sunday");
+    break;
+  default:
+    console.log("Invalid day");
+}
+```
+
+This is useful when you have many conditions to check, each with different actions.
 
 ## 6. Functions
 
