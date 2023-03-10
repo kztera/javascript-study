@@ -16,9 +16,12 @@
       - [3.2.6.1. NaN](#3261-nan)
     - [3.2.7. Null and Undefined](#327-null-and-undefined)
     - [3.2.8. Object](#328-object)
-      - [3.2.8.1 Array](#3281-array)
+      - [3.2.8.1. Array](#3281-array)
   - [3.3. Statically typed vs. dynamically typed](#33-statically-typed-vs-dynamically-typed)
 - [4. Operators and Equality](#4-operators-and-equality)
+  - [4.1. Strict mode](#41-strict-mode)
+  - [4.2. Comparison Operators](#42-comparison-operators)
+  - [4.3. Logical Operators](#43-logical-operators)
 - [5. Logic and Control Flow](#5-logic-and-control-flow)
 - [6. Functions](#6-functions)
 
@@ -350,7 +353,7 @@ person.name = "Jane";
 console.log(person["name"]); // Jane
 ```
 
-##### 3.2.8.1 Array
+##### 3.2.8.1. Array
 
 An array is a special type of object that stores a collection of values. The values can be of any data type, including strings, numbers, booleans, objects, and even other arrays. 
 
@@ -399,6 +402,78 @@ console.log(typeof a); // string
 ```
 
 ## 4. Operators and Equality
+
+### 4.1. Strict mode
+
+Simply, strict mode in JavaScript is a stricter set of rules that can help you avoid common coding mistakes and make your code more secure. When you use strict mode, the JavaScript engine will prevent you from doing things that could potentially cause bugs or security vulnerabilities. To use strict mode, you simply add the string `use strict;` at the beginning of your code.
+
+We have a good answer on StackOverflow in [here](https://stackoverflow.com/questions/1335851/what-does-use-strict-do-in-javascript-and-what-is-the-reasoning-behind-it) about it and the reason why we need strict mode.
+
+### 4.2. Comparison Operators
+
+Comparison operators are used in logical statements to determine equality or difference between variables or values. The result of a comparison is always a boolean: `true` or `false`.
+
+| Operator | Description |
+| :--- | :--- |
+| `==` | equal to |
+| `===` | equal value and equal type |
+| `!=` | not equal |
+| `!==` | not equal value or not equal type |
+| `>` | greater than |
+| `<` | less than |
+| `>=` | greater than or equal to |
+| `<=` | less than or equal to |
+
+For example:
+
+```javascript
+var a = 1;
+var b = 2;
+
+console.log(a == b); // false
+console.log(a != b); // true
+```
+
+So, why we have two different operators for equality? The equality operator in javascript is used to compare if two values are equal. The comparison is made by `==` and `===` operators in javascript. The main difference between the `==` and `===` operator in javascript is that the `==` operator does the type conversion of the operands before comparison, whereas the `===` operator compares the values as well as the data types of the operands.
+
+```javascript
+var a = 1;
+var b = "1";
+
+console.log(a == b); // true
+console.log(a === b); // false
+```
+
+And again, sometimes we get a few surprises:
+
+<img src="assets/operator-equal.png" display="inline-block" width="400px">
+
+To explain this, you can read in [here](https://www.freecodecamp.org/news/explaining-the-best-javascript-meme-i-have-ever-seen/).
+
+In the end, you should always use `===` and `!==` to compare values in JavaScript. (In strict mode, `==` and `!=` are not allowed.)
+
+If you are considering, check [Equality in JavaScript](https://dorey.github.io/JavaScript-Equality-Table/unified/) to see the full table of equality in JavaScript by [@dorey](github.com/dorey) and has realize Moral of the story is *"Always use 3 equals unless you have a good reason to use 2."*
+
+### 4.3. Logical Operators
+
+Logical operators are used to determine the logic between variables or values. The result of a logical operation is always a boolean: `true` or `false`.
+
+| Operator | Description |
+| :--- | :--- |
+| `&&` | logical AND: All operands must be true for the result to be true. |
+| `\|\|` | logical OR: Any operand must be true for the result to be true. |
+| `!` | logical NOT: Reverses the result of the operand. |
+
+For example:
+
+```javascript
+var a = 1;
+var b = 2;
+
+console.log(a == 1 && b == 2); // true
+console.log(a == 1 || b == 3); // true
+console.log(!(a == 1)); // false
+```
 
 ## 5. Logic and Control Flow
 
