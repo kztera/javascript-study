@@ -4,19 +4,19 @@ _In fact, I really hate CSS. But I have to learn it and it's gonna be helpful (I
 
 <h2> Table of Contents </h2>
 
--  [1. Basic HTML Sturcture and Elements](#1-basic-html-sturcture-and-elements)
-   -  [1.1. Heading `<h1>` - `<h6>`](#11-heading-h1---h6)
-   -  [1.2. Paragraph `<p>`](#12-paragraph-p)
-   -  [1.3. Anchor `<a>`](#13-anchor-a)
--  [2. HTML Attributes, Classes and IDs](#2-html-attributes-classes-and-ids)
-   -  [2.1. HTML Attributes](#21-html-attributes)
-   -  [2.2. Classes and IDs](#22-classes-and-ids)
--  [3. Super Basic CSS for styling](#3-super-basic-css-for-styling)
--  [4. CSS Selectors](#4-css-selectors)
-   -  [4.1. Universal Selector `*`](#41-universal-selector-)
-   -  [4.2. Type Selector](#42-type-selector)
-   -  [4.3. Class and ID Selector](#43-class-and-id-selector)
--  [5. CSS Box Model](#5-css-box-model)
+- [1. Basic HTML Sturcture and Elements](#1-basic-html-sturcture-and-elements)
+  - [1.1. Heading `<h1>` - `<h6>`](#11-heading-h1---h6)
+  - [1.2. Paragraph `<p>`](#12-paragraph-p)
+  - [1.3. Anchor `<a>`](#13-anchor-a)
+- [2. HTML Attributes, Classes and IDs](#2-html-attributes-classes-and-ids)
+  - [2.1. HTML Attributes](#21-html-attributes)
+  - [2.2. Classes and IDs](#22-classes-and-ids)
+- [3. Super Basic CSS for styling](#3-super-basic-css-for-styling)
+- [4. CSS Selectors](#4-css-selectors)
+  - [4.1. Universal Selector `*`](#41-universal-selector-)
+  - [4.2. Type Selector](#42-type-selector)
+  - [4.3. Class and ID Selector](#43-class-and-id-selector)
+- [5. CSS Box Model](#5-css-box-model)
 
 ## 1. Basic HTML Sturcture and Elements
 
@@ -203,4 +203,4 @@ Tada! You have finished the crash course of HTML and CSS. Now, you can move on t
 
 ( ﾉ ﾟｰﾟ)ﾉ Next Chapter in here: [II. DOM and Events Fundamentals](https://github.com/kztera/javascript-study/blob/main/ii-DOM-and-events-fundamentals/dom-n-events-fundamentals.md)
 
-<div style="width:480px"><iframe allow="fullscreen" frameBorder="0" height="270" src="https://giphy.com/embed/U4dLVG7d5KsqnN8pBG/video" width="480"></iframe></div>
+<img src="https://media.giphy.com/media/BPJmthQ3YRwD6QqcVD/giphy.gif">
