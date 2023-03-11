@@ -704,8 +704,11 @@ So, we have learned about:
 To practice more, you can use all you learned to make a small project. For example, you can make a calculator or a game like Tic Tac Toe or Rock Paper Scissors. Hope you enjoy it and ready to go to the next chapter ^^.
 
 ---
+But wait, there's more!
 
-( ﾉ ﾟｰﾟ)ﾉ Next Chapter in herer: [II. DOM and Events Fundamentals](https://github.com/kztera/javascript-study/blob/main/ii-DOM-and-events-fundamentals/dom-n-events-fundamentals.md) 
+Before go to the DOM and Events Fundamentals, it's good if you know basic HTML and CSS. No? You can learn it in here: [HTML and CSS Crash Course](https://github.com/kztera/javascript-study/blob/main/0-html-css-crash-course/README.md) with super super basic knowledge. 
+
+( ﾉ ﾟｰﾟ)ﾉ Next Chapter in here: [II. DOM and Events Fundamentals](https://github.com/kztera/javascript-study/blob/main/ii-DOM-and-events-fundamentals/dom-n-events-fundamentals.md) 
 
 ![congrats](assets/congrats.gif)
 
