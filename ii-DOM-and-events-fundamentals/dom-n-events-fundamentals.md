@@ -217,6 +217,8 @@ In this tutorial, we learned how to use DOM and events to manipulate HTML elemen
 
 ---
 
-o(≧∇≦)ﾉ [III. How JavaScript Works Behind the Scenes](https://github.com/kztera/javascript-study/blob/main/iii-how-js-works-behind-the-sences/how-js-works.md)
+o(≧∇≦)ﾉ Next chapter in here: [III. How JavaScript Works Behind the Scenes](https://github.com/kztera/javascript-study/blob/main/iii-how-js-works-behind-the-sences/how-js-works.md)
 
 And one more time, Congratulations! You have completed the next chapter of this JavaScript study. I hope you enjoyed it and have a lot of motivation to continue learning. See you in the next chapter!
+
+![congratulations](https://gifsec.com/wp-content/uploads/2022/09/congrats-gif-50.gif)
