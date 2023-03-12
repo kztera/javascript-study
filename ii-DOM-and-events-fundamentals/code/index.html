@@ -5,19 +5,18 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <title>Chapter 2</title>
+      <link rel="stylesheet" href="style.css" />
    </head>
    <body>
-      <div>
-         <h1>Chapter 2</h1>
-         <p>DOM and events fundamentals</p>
-         <button id="btn">Click me</button>
-         <p class="paragraph1">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, facilis rem quae adipisci quibusdam sequi
-            optio delectus impedit perferendis aspernatur repudiandae cumque cupiditate dolorem voluptas vero alias,
-            iusto nemo possimus.
-         </p>
+      <h1>Chapter 2</h1>
+      <p>DOM and events fundamentals</p>
+      <button class="show-modal">Show modal</button>
+      <div class="modal hidden">
+         <button class="close-modal">&times;</button>
+         <h1>This is a modal window</h1>
+         <p>Something in modal windows . . .</p>
       </div>
-
+      <div class="overlay hidden"></div>
       <script src="script.js"></script>
    </body>
 </html>
